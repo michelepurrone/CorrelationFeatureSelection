@@ -1,0 +1,3 @@
+#!/bin/bash
+./runcfs32omp
+./cfs32_omp -ds test_5000_50_32.ds -labels test_5000_50_32.labels -k 5 -d

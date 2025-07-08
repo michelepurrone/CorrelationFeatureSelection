@@ -1,0 +1,7 @@
+#!/bin/bash
+if [[ ! -e sseutils32.o ]]; then nasm -f elf32 sseutils32.nasm; fi;
+nasm -f elf32 cfs32_omp.nasm
+gcc -m32 -msse -O0 -no-pie -fopenmp sseutils32.o cfs32_omp.o cfs32_omp.c -o cfs32_omp -lm
+pars="";
+for arg; do pars=$pars" "$arg; done;
+./cfs32_omp $pars

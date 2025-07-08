@@ -1,0 +1,3 @@
+#!/bin/bash
+./runcfs64
+./cfs64c -ds test_75000_1350_64.ds -labels test_75000_1350_64.labels -k 1350 -d
